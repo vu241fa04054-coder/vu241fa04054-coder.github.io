@@ -1,0 +1,80 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #020617;
+}
+
+.road-line-vertical {
+    background-image: repeating-linear-gradient(to bottom, transparent, transparent 20px, #facc15 20px, #facc15 40px);
+}
+
+.road-line-horizontal {
+    background-image: repeating-linear-gradient(to right, transparent, transparent 20px, #facc15 20px, #facc15 40px);
+}
+
+.light-active-red {
+    background-color: #ef4444;
+    box-shadow: 0 0 20px rgba(239, 68, 68, .5);
+}
+
+.light-active-yellow {
+    background-color: #facc15;
+    box-shadow: 0 0 20px rgba(250, 204, 21, .5);
+}
+
+.light-active-green {
+    background-color: #22c55e;
+    box-shadow: 0 0 20px rgba(34, 197, 94, .5);
+}
+
+.light-inactive-red {
+    background: rgba(127, 29, 29, .3);
+}
+
+.light-inactive-yellow {
+    background: rgba(113, 63, 18, .3);
+}
+
+.light-inactive-green {
+    background: rgba(20, 83, 45, .3);
+}
+
+.light-glow {
+    transition: all .3s ease;
+}
+
+/* 🔴 Blinking effect */
+@keyframes blinkRed {
+
+    0%,
+    100% {
+        background-color: #7f1d1d;
+        color: #ef4444;
+    }
+
+    50% {
+        background-color: #ef4444;
+        color: white;
+    }
+}
+
+.blink {
+    animation: blinkRed 1s infinite;
+}
+
+/* Radar scan effect */
+@keyframes scanRadar {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+
+.radar-scan {
+    animation: scanRadar 2s infinite;
+}
